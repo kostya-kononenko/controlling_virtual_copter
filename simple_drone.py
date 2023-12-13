@@ -75,3 +75,10 @@ def set_yaw(angle):
 
 
 set_yaw(350)
+
+
+# back to home point
+vehicle.mode = VehicleMode("RTL")
+
+# close connection
+vehicle.close()
