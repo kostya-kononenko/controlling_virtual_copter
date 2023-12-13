@@ -56,3 +56,22 @@ def fly_to_point_b(location):
 
 
 fly_to_point_b([50.443326, 30.448078])
+
+
+def set_yaw(angle):
+    msg = vehicle.message_factory.command_long_encode(
+        0, 0,  # target_system, target_component
+        mavutil.mavlink.MAV_CMD_CONDITION_YAW,  # command
+        0,  # confirmation
+        angle,  # param1 (yaw angle in degrees)
+        0,  # param2 (speed)
+        1,  # param3 (direction: 1 for clockwise, -1 for counter-clockwise)
+        1,  # param4 (relative: 1 for relative angle, 0 for absolute angle)
+        0, 0, 0  # param5, param6, param7
+    )
+    print("Create yaw command")
+    vehicle.send_mavlink(msg)
+    vehicle.flush()
+
+
+set_yaw(350)
