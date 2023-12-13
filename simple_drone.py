@@ -38,3 +38,21 @@ def arm_and_takeoff(target_altitude):
 
 
 arm_and_takeoff(100)
+
+
+def fly_to_point_b(location):
+    point = LocationGlobalRelative(location[0], location[1], 100)
+    vehicle.simple_goto(point, groundspeed=20)
+    while True:
+        distance_to_target = (
+            location[0] - vehicle.location.global_relative_frame.lat,
+            location[1] - vehicle.location.global_relative_frame.lon)
+        print("Distance to target: ", distance_to_target)
+        if (abs(distance_to_target[0]) < 0.0001
+                and abs(distance_to_target[1]) < 0.0001):
+            print("Reached target point")
+            break
+        time.sleep(1)
+
+
+fly_to_point_b([50.443326, 30.448078])
