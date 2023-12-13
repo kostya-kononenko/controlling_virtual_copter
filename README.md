@@ -25,3 +25,7 @@ Flight speed 20 km/h.
 ## Picture
 
 ![Знімок екрана з 2023-12-13 16-03-34](https://github.com/kostya-kononenko/controlling_virtual_copter/assets/107486491/414a56ba-059a-4dec-b208-b3a7b8a7542f)
+
+## Flight video recording
+
+https://www.loom.com/share/a981358827ad4a1c86d2edfe3574c568?sid=5ee99dc1-d251-4f4d-87ad-c5e66382f5eb
