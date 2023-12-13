@@ -10,7 +10,7 @@ and returns to point A. The flight altitude is 100 meters.
 Flight speed 20 km/h.
 
 
-## How to installing and run using GitHub
+## How to install and run using GitHub
 
 - Clone this repository
 - Create venv: python -m venv venv
